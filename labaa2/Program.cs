@@ -102,7 +102,7 @@ namespace labaa2
                 }
                 if (isEmpty)
                 {
-                    throw new ArgumentException("Row can't be zero");
+                    throw new ArgumentException("Row can't be empty");
                 }
             }
             this.array = array;
