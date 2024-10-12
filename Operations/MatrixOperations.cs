@@ -4,8 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Operations
+namespace labaa2
 {
+    public partial class MyMatrix
+    {
+       
+
+    }
     internal class MatrixOperations
     {
         static void Main(string[] args)
