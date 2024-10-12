@@ -138,6 +138,27 @@ namespace labaa2
                 }
             }
         }
+        public MyMatrix(string[] str)
+        {
+            int row = str.Length;
+            int col = str[0].Split(' ').Length;
+            try
+            {
+                this.array = new double[row, col];
+                for (int i = 0; i < row; i++)
+                {
+                    string[] elements = str[i].Split(' ');
+                    for (int j = 0; j < col; j++)
+                    {
+                        array[i, j] = Convert.ToDouble(elements[j]);
+                    }
+                }
+            }
+            catch (FormatException ex)
+            {
+                throw new ArgumentException("Array of strings contain non-numeric values",ex);
+            }
+        }
     }
     internal class Program
     {
