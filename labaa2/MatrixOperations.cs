@@ -20,7 +20,7 @@ namespace labaa2
             {
                 for (int j = 0; j < matrix1.Width; j++)
                 {
-                    newMatrix.array[i,j] = matrix1.array[i, j] + matrix2.array[i, j];
+                    newMatrix[i,j] = matrix1[i, j] + matrix2[i, j];
                 }
             }
             return newMatrix;
