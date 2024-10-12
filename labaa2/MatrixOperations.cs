@@ -63,7 +63,11 @@ namespace labaa2
             return copy;
 
         }
-        
+        public void TransponeMe()
+        {
+            double[,] transponed = GetTransponedArray();
+            this.array = transponed;
+        }
     }
     internal class MatrixOperations
     {
