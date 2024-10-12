@@ -97,7 +97,37 @@ namespace labaa2
                     }
                     MyMatrix secondMatrix = new MyMatrix(array2);
                     MyMatrix sum = firstMatrix + secondMatrix;
-                    Console.WriteLine($"Sum of matrixes: {sum.ToString()}");
+                    Console.WriteLine("Result of sum:");
+                    Console.WriteLine(sum.ToString());
+                    break;
+                case 6:
+                    Console.WriteLine("Enter first matrix");
+                    rows = Console.ReadLine().Split('\n');
+                    double[,] array3 = new double[rows.Length, rows[0].Split(' ').Length];
+                    for (int i = 0; i < rows.Length; i++)
+                    {
+                        string[] elements = rows[i].Split(' ');
+                        for (int j = 0; j < elements.Length; j++)
+                        {
+                            array3[i, j] = Convert.ToDouble(elements[j]);
+                        }
+                    }
+                    MyMatrix firstMatrix1 = new MyMatrix(array3);
+                    Console.WriteLine("Enter second matrix");
+                    rows = Console.ReadLine().Split('\n');
+                    double[,] array4 = new double[rows.Length, rows[0].Split(' ').Length];
+                    for (int i = 0; i < rows.Length; i++)
+                    {
+                        string[] elements = rows[i].Split(' ');
+                        for (int j = 0; j < elements.Length; j++)
+                        {
+                            array4[i, j] = Convert.ToDouble(elements[j]);
+                        }
+                    }
+                    MyMatrix secondMatrix2= new MyMatrix(array4);
+                    MyMatrix multiply = firstMatrix1 * secondMatrix2;
+                    Console.WriteLine("Result of multiply");
+                    Console.WriteLine(multiply.ToString());
                     break;
             }
         }
