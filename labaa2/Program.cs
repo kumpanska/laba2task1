@@ -85,6 +85,10 @@ namespace labaa2
         }
         public MyMatrix(double[,] array)
         {
+            if (array == null)
+            {
+                throw new ArgumentNullException(nameof(array), "Array can't be null");
+            }
             this.array = array;
         }
     }
