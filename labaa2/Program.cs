@@ -83,6 +83,10 @@ namespace labaa2
                 }
             }
         }
+        public MyMatrix(double[,] array)
+        {
+            this.array = array;
+        }
     }
     internal class Program
     {
