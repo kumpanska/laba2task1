@@ -13,6 +13,8 @@ namespace labaa2
         { get { return array.GetLength(0); } }
         public int Width
         { get { return array.GetLength(1); } }
+        public int getHeight() { return Height; }
+        public int getWidth() { return Width; }
     }
     internal class Program
     {
