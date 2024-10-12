@@ -8,19 +8,28 @@ namespace labaa2
 {
     internal class InputOutput
     {
-        public void Input(MyMatrix matrix)
+        public void Output()
         {
-            double[,] array = new double[matrix.Height, matrix.Width];
-            for (int i = 0; i < matrix.Height; i++)
+            Console.WriteLine("Choose type of matrix");
+            int n = Convert.ToInt32(Console.ReadLine());
+            switch(n)
             {
-                string[] elements = Console.ReadLine().Split(' ');
-                for (int j = 0; j < matrix.Width; j++)
-                {
-                    array[i, j] = Convert.ToDouble(elements[j]);
-                }
+                case 1:
+                    Console.WriteLine("Enter matrix from 2D array");
+                    string[] rows = Console.ReadLine().Split('\n');
+                    double[,] array = new double[rows.Length, rows[0].Split(' ').Length];
+                    for (int i = 0; i < rows.Length; i++)
+                    {
+                        string[] elements = rows[i].Split(' ');
+                        for (int j = 0; j < elements.Length; j++)
+                        {
+                            array[i, j] = Convert.ToDouble(elements[j]);
+                        }
+                    }
+                    MyMatrix matrix1 = new MyMatrix(array);
+                    Console.WriteLine(matrix1.ToString());
+                    break;
             }
-
         }
-      
     }
 }
