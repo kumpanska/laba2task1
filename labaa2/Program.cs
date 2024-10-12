@@ -15,6 +15,11 @@ namespace labaa2
         { get { return array.GetLength(1); } }
         public int getHeight() { return Height; }
         public int getWidth() { return Width; }
+        public double this[int i, int j]
+        {
+            get { return array[i, j]; }
+            set { array[i, j] = value; }
+        }
     }
     internal class Program
     {
