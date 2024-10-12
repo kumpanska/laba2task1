@@ -179,6 +179,10 @@ namespace labaa2
                 throw new ArgumentException("Array of strings contain non-numeric values",ex);
             }
         }
+        public MyMatrix(string str) : this(str.Split(new[] { '\n'},StringSplitOptions.RemoveEmptyEntries))
+        {
+            
+        }
     }
     internal class Program
     {
