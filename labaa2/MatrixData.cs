@@ -8,7 +8,7 @@ namespace labaa2
 {
     public partial class MyMatrix
     {
-        double[,] array;
+        private double[,] array;
         public int Height
         { get { return array.GetLength(0); } }
         public int Width
@@ -188,6 +188,27 @@ namespace labaa2
     {
         static void Main(string[] args)
         {
+            double[,] arr = { { 1, 0, 5 }, { 14, 32, 134 }, { 123, 23, 55 } };
+            MyMatrix myMatrix1 = new MyMatrix(arr);
+            Console.WriteLine("Matrix from 2D array");
+            Console.WriteLine(myMatrix1.ToString());
+            Console.WriteLine($"Access to element:{arr[0, 0]}");
+            double[][] jagged = { new double[] { 0, 1 }, new double[] { 112, 13 }, new double[] { -23, 312 } };
+            MyMatrix myMatrix2 = new MyMatrix(jagged);
+            Console.WriteLine("Matrix from jagged array");
+            Console.WriteLine(myMatrix2.ToString());
+            string[] strArray = { "0 8 9 0", "23 42 44 134", "244 -2 1 -3" };
+            MyMatrix myMatrix3 = new MyMatrix(strArray);
+            Console.WriteLine("Matrix from string array");
+            Console.WriteLine(myMatrix3.ToString());
+            string str = "0 3 0\n76 2 4\n43 22 -23";
+            MyMatrix myMatrix4 = new MyMatrix(str);
+            Console.WriteLine("Matrix from string");
+            Console.WriteLine(myMatrix4.ToString());
+            MyMatrix origMatrix = new MyMatrix(arr);
+            MyMatrix copyMatrix = new MyMatrix(origMatrix);
+            Console.WriteLine("Matrix from copy of other instance");
+            Console.WriteLine(copyMatrix.ToString());
         }
     }
 }
