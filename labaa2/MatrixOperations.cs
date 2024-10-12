@@ -45,6 +45,18 @@ namespace labaa2
             }
             return newMatrix;
         }
+        private double [,] GetTransponedArray()
+        {
+            double[,] transponed = new double[Height, Width];
+            for (int i = 0; i < Height; i++)
+            {
+                for (int j = 0; j < Width; j++)
+                {
+                    transponed[j,i] = array[i,j];
+                }
+            }
+            return transponed;
+        }
     }
     internal class MatrixOperations
     {
