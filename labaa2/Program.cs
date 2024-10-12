@@ -107,6 +107,37 @@ namespace labaa2
             }
             this.array = array;
         }
+        public MyMatrix(double[][] jagged)
+        {
+            this.array = new double[jagged.Length, jagged[0].Length];
+            for(int i=0;i<jagged.Length;i++)
+            {
+                if (jagged[i].Length != jagged[0].Length)
+                {
+                    throw new ArgumentException("Jagged array should be rectangular");
+                }
+                bool isEmpty = true;
+                for (int j = 0; j < jagged[0].Length; j++)
+                {
+                    if (jagged[i][j] != 0)
+                    {
+                        isEmpty = false;
+                        break;
+                    }
+                }
+                if (isEmpty)
+                {
+                    throw new ArgumentException("Row cannot be empty");
+                }
+            }
+            for (int i = 0; i < jagged.Length; i++)
+            {
+                for (int j = 0; j < jagged[0].Length; j++)
+                {
+                    this.array[i, j] = jagged[i][j];
+                }
+            }
+        }
     }
     internal class Program
     {
