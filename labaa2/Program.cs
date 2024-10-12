@@ -17,8 +17,26 @@ namespace labaa2
         public int getWidth() { return Width; }
         public double this[int i, int j]
         {
-            get { return array[i, j]; }
-            set { array[i, j] = value; }
+            get {
+                if (i < 0 || i > array.GetLength(0))
+                {
+                    throw new IndexOutOfRangeException("Row index is out of range");
+                }
+                if (j < 0 || j > array.GetLength(1))
+                {
+                    throw new IndexOutOfRangeException("Column index is out of range");
+                }
+                return array[i, j]; }
+            set {
+                if (i < 0 || i > array.GetLength(0))
+                {
+                    throw new IndexOutOfRangeException("Row index is out of range");
+                }
+                if (j < 0 || j > array.GetLength(1))
+                {
+                    throw new IndexOutOfRangeException("Column index is out of range");
+                }
+                array[i, j] = value; }
         }
     }
     internal class Program
