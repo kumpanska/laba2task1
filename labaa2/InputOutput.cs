@@ -51,6 +51,26 @@ namespace labaa2
                     MyMatrix transposed2 = matrix2.GetTrasponedCopy();
                     Console.WriteLine(transposed2.ToString());
                     break;
+                case 3:
+                    Console.WriteLine("Enter matrix from array string");
+                    rows = Console.ReadLine().Split('\n');
+                    string[] stringArray = new string[rows.Length];
+                    for (int i = 0; i < rows.Length; i++)
+                    {
+                        stringArray[i] = rows[i];
+                    }
+                    MyMatrix matrix3 = new MyMatrix(stringArray);
+                    Console.WriteLine(matrix3.ToString());
+                    Console.WriteLine("Transpose matrix");
+                    MyMatrix transposed3 = matrix3.GetTrasponedCopy();
+                    Console.WriteLine(transposed3.ToString());
+                    break;
+                case 4:
+                    Console.WriteLine("Enter matrix from string");
+                    string str = Console.ReadLine();
+                    MyMatrix matrix4 = new MyMatrix(str);
+                    Console.WriteLine(matrix4.ToString());
+                    break;
             }
         }
     }
