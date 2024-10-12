@@ -188,7 +188,8 @@ namespace labaa2
     {
         static void Main(string[] args)
         {
-            
+            InputOutput res = new InputOutput();
+            res.Output();
         }
     }
 }
