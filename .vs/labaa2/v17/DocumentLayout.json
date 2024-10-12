@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\c#labs\\labaa2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{62513BD4-9566-4F4C-9594-D58D74504E5E}|labaa2\\labaa2.csproj|c:\\c#labs\\labaa2\\operations\\matrixoperations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62513BD4-9566-4F4C-9594-D58D74504E5E}|labaa2\\labaa2.csproj|solutionrelative:operations\\matrixoperations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{62513BD4-9566-4F4C-9594-D58D74504E5E}|labaa2\\labaa2.csproj|c:\\c#labs\\labaa2\\labaa2\\matrixoperations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62513BD4-9566-4F4C-9594-D58D74504E5E}|labaa2\\labaa2.csproj|solutionrelative:labaa2\\matrixoperations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{62513BD4-9566-4F4C-9594-D58D74504E5E}|labaa2\\labaa2.csproj|C:\\c#labs\\labaa2\\labaa2\\matrixdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -28,13 +28,13 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "MatrixOperations.cs",
-              "DocumentMoniker": "C:\\c#labs\\labaa2\\Operations\\MatrixOperations.cs",
-              "RelativeDocumentMoniker": "Operations\\MatrixOperations.cs",
-              "ToolTip": "C:\\c#labs\\labaa2\\Operations\\MatrixOperations.cs",
-              "RelativeToolTip": "Operations\\MatrixOperations.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAUwBEAAAAQAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\c#labs\\labaa2\\labaa2\\MatrixOperations.cs",
+              "RelativeDocumentMoniker": "labaa2\\MatrixOperations.cs",
+              "ToolTip": "C:\\c#labs\\labaa2\\labaa2\\MatrixOperations.cs",
+              "RelativeToolTip": "labaa2\\MatrixOperations.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T14:25:55.268Z",
+              "WhenOpened": "2024-10-12T16:49:57.254Z",
               "EditorCaption": ""
             },
             {
