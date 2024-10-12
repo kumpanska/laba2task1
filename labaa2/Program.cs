@@ -89,6 +89,22 @@ namespace labaa2
             {
                 throw new ArgumentNullException(nameof(array), "Array can't be null");
             }
+            for (int i = 0; i < Height; i++)
+            {
+                bool isEmpty = true;
+                for (int j = 0; j < Width; j++)
+                {
+                    if (array[i,j]!=0)
+                    {
+                        isEmpty = false;
+                        break;
+                    }
+                }
+                if (isEmpty)
+                {
+                    throw new ArgumentException("Row can't be zero");
+                }
+            }
             this.array = array;
         }
     }
