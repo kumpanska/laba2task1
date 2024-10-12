@@ -140,17 +140,37 @@ namespace labaa2
         }
         public MyMatrix(string[] str)
         {
+            if (str == null || str.Length == 0)
+            {
+                throw new ArgumentException("Input can't be null or empty");
+            }
             int row = str.Length;
             int col = str[0].Split(' ').Length;
+            for (int i = 1; i < row; i++)
+            {
+                if (str[i].Split(' ').Length != col)
+                {
+                    throw new ArgumentException("All rows should be the same length");
+                }
+            }
             try
             {
                 this.array = new double[row, col];
                 for (int i = 0; i < row; i++)
                 {
                     string[] elements = str[i].Split(' ');
+                    bool isEmpty = true;
                     for (int j = 0; j < col; j++)
                     {
                         array[i, j] = Convert.ToDouble(elements[j]);
+                        if (array[i, j] != 0)
+                        {
+                            isEmpty = false;
+                        }
+                    }
+                    if (isEmpty)
+                    {
+                        throw new ArgumentException("Row can't be zero");
                     }
                 }
             }
