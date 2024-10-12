@@ -57,6 +57,13 @@ namespace labaa2
             }
             return transponed;
         }
+        public MyMatrix GetTrasponedCopy()
+        {
+            MyMatrix copy = new MyMatrix(GetTransponedArray());
+            return copy;
+
+        }
+        
     }
     internal class MatrixOperations
     {
