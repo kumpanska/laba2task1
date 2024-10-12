@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\c#labs\\labaa2\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{62513BD4-9566-4F4C-9594-D58D74504E5E}|labaa2\\labaa2.csproj|c:\\c#labs\\labaa2\\labaa2\\inputoutput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62513BD4-9566-4F4C-9594-D58D74504E5E}|labaa2\\labaa2.csproj|solutionrelative:labaa2\\inputoutput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{62513BD4-9566-4F4C-9594-D58D74504E5E}|labaa2\\labaa2.csproj|c:\\c#labs\\labaa2\\labaa2\\matrixoperations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{62513BD4-9566-4F4C-9594-D58D74504E5E}|labaa2\\labaa2.csproj|solutionrelative:labaa2\\matrixoperations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -27,25 +31,38 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "InputOutput.cs",
+              "DocumentMoniker": "C:\\c#labs\\labaa2\\labaa2\\InputOutput.cs",
+              "RelativeDocumentMoniker": "labaa2\\InputOutput.cs",
+              "ToolTip": "C:\\c#labs\\labaa2\\labaa2\\InputOutput.cs",
+              "RelativeToolTip": "labaa2\\InputOutput.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T20:17:06.877Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "MatrixOperations.cs",
               "DocumentMoniker": "C:\\c#labs\\labaa2\\labaa2\\MatrixOperations.cs",
               "RelativeDocumentMoniker": "labaa2\\MatrixOperations.cs",
               "ToolTip": "C:\\c#labs\\labaa2\\labaa2\\MatrixOperations.cs",
               "RelativeToolTip": "labaa2\\MatrixOperations.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAAAowD0AAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-12T16:49:57.254Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "MatrixData.cs",
               "DocumentMoniker": "C:\\c#labs\\labaa2\\labaa2\\MatrixData.cs",
               "RelativeDocumentMoniker": "labaa2\\MatrixData.cs",
               "ToolTip": "C:\\c#labs\\labaa2\\labaa2\\MatrixData.cs",
               "RelativeToolTip": "labaa2\\MatrixData.cs",
-              "ViewState": "AgIAAIkAAAAAAAAAAADwv7EAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAKkAAAAAAAAAAAAiwLQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-12T07:57:18.41Z",
               "EditorCaption": ""
