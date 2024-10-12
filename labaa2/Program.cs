@@ -37,7 +37,12 @@ namespace labaa2
                     throw new IndexOutOfRangeException("Column index is out of range");
                 }
                 array[i, j] = value; }
+
         }
+        public double getElement(int i, int j)
+        { return array[i, j]; }
+        public void setElement(int i, int j, double value)
+        { array[i, j] = value; }
     }
     internal class Program
     {
