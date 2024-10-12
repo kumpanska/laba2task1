@@ -8,7 +8,7 @@ namespace labaa2
 {
     public partial class MyMatrix
     {
-       
+        
 
     }
     internal class MatrixOperations

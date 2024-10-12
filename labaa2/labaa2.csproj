@@ -43,6 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\Operations\MatrixOperations.cs">
+      <Link>MatrixOperations.cs</Link>
+    </Compile>
     <Compile Include="MatrixData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
