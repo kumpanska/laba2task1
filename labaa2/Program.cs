@@ -158,7 +158,7 @@ namespace labaa2
                 this.array = new double[row, col];
                 for (int i = 0; i < row; i++)
                 {
-                    string[] elements = str[i].Split(' ');
+                    string[] elements = str[i].Split(new[] {' ','\t'},StringSplitOptions.RemoveEmptyEntries);
                     bool isEmpty = true;
                     for (int j = 0; j < col; j++)
                     {
