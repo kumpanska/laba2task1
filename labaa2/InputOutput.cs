@@ -28,6 +28,28 @@ namespace labaa2
                     }
                     MyMatrix matrix1 = new MyMatrix(array);
                     Console.WriteLine(matrix1.ToString());
+                    Console.WriteLine("Transposed matrix");
+                    MyMatrix transposed = matrix1.GetTrasponedCopy();
+                    Console.WriteLine(transposed.ToString());
+                    break;
+                case 2:
+                    Console.WriteLine("Enter matrix from jaggged array");
+                    string[] r = Console.ReadLine().Split('\n');
+                    double[][] jaggedArray = new double[r.Length][];
+                    for (int i = 0; i < r.Length; i++)
+                    {
+                        string[] elements = r[i].Split(' ');
+                        jaggedArray[i] = new double[elements.Length];
+                        for (int j = 0; j < elements.Length; j++)
+                        {
+                            jaggedArray[i][j] = Convert.ToDouble(elements[j]);
+                        }
+                    }
+                    MyMatrix matrix2 = new MyMatrix(jaggedArray);
+                    Console.WriteLine(matrix2.ToString());
+                    Console.WriteLine("Transpose matrix");
+                    MyMatrix transposed2 = matrix2.GetTrasponedCopy();
+                    Console.WriteLine(transposed2.ToString());
                     break;
             }
         }
