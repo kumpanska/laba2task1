@@ -1,7 +1,0 @@
-C:\c#labs\labaa2\labaa2\bin\Debug\labaa2.exe.config
-C:\c#labs\labaa2\labaa2\bin\Debug\labaa2.exe
-C:\c#labs\labaa2\labaa2\bin\Debug\labaa2.pdb
-C:\c#labs\labaa2\labaa2\obj\Debug\labaa2.csproj.AssemblyReference.cache
-C:\c#labs\labaa2\labaa2\obj\Debug\labaa2.csproj.CoreCompileInputs.cache
-C:\c#labs\labaa2\labaa2\obj\Debug\labaa2.exe
-C:\c#labs\labaa2\labaa2\obj\Debug\labaa2.pdb

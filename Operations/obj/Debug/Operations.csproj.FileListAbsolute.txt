@@ -1,7 +1,0 @@
-C:\c#labs\labaa2\Operations\obj\Debug\Operations.csproj.AssemblyReference.cache
-C:\c#labs\labaa2\Operations\obj\Debug\Operations.csproj.CoreCompileInputs.cache
-C:\c#labs\labaa2\Operations\bin\Debug\Operations.exe.config
-C:\c#labs\labaa2\Operations\bin\Debug\Operations.exe
-C:\c#labs\labaa2\Operations\bin\Debug\Operations.pdb
-C:\c#labs\labaa2\Operations\obj\Debug\Operations.exe
-C:\c#labs\labaa2\Operations\obj\Debug\Operations.pdb
