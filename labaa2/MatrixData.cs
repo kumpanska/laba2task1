@@ -89,10 +89,10 @@ namespace labaa2
             {
                 throw new ArgumentNullException(nameof(array), "Array can't be null");
             }
-            for (int i = 0; i < Height; i++)
+            for (int i = 0; i < array.GetLength(0); i++)
             {
                 bool isEmpty = true;
-                for (int j = 0; j < Width; j++)
+                for (int j = 0; j < array.GetLength(1); j++)
                 {
                     if (array[i,j]!=0)
                     {
