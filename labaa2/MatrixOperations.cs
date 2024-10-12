@@ -25,6 +25,26 @@ namespace labaa2
             }
             return newMatrix;
         }
+        public static MyMatrix operator *(MyMatrix matrix1, MyMatrix matrix2)
+        {
+            if (matrix1.Width != matrix2.Height)
+            {
+                throw new ArgumentException("Row of second matrix and column of first matrix should be equal");
+
+            }
+            MyMatrix newMatrix = new MyMatrix(new double[matrix1.Height, matrix2.Width]);
+            for (int i = 0; i < matrix1.Height; i++)
+            {
+                for (int j = 0; j < matrix2.Width; j++)
+                {
+                    for (int k=0;k<matrix1.Width;k++)
+                    {
+                        newMatrix[i, j] += matrix1[i, k] * matrix2[k,j];
+                    }
+                }
+            }
+            return newMatrix;
+        }
     }
     internal class MatrixOperations
     {
