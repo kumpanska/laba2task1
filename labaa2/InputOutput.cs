@@ -71,6 +71,34 @@ namespace labaa2
                     MyMatrix matrix4 = new MyMatrix(str);
                     Console.WriteLine(matrix4.ToString());
                     break;
+                case 5:
+                    Console.WriteLine("Enter first matrix");
+                    rows = Console.ReadLine().Split('\n');
+                    double[,] array1 = new double[rows.Length, rows[0].Split(' ').Length];
+                    for (int i = 0; i < rows.Length; i++)
+                    {
+                        string[] elements = rows[i].Split(' ');
+                        for (int j = 0; j < elements.Length; j++)
+                        {
+                            array1[i, j] = Convert.ToDouble(elements[j]);
+                        }
+                    }
+                    MyMatrix firstMatrix = new MyMatrix(array1);
+                    Console.WriteLine("Enter second matrix");
+                    rows = Console.ReadLine().Split('\n');
+                    double[,] array2 = new double[rows.Length, rows[0].Split(' ').Length];
+                    for (int i = 0; i < rows.Length; i++)
+                    {
+                        string[] elements = rows[i].Split(' ');
+                        for (int j = 0; j < elements.Length; j++)
+                        {
+                            array2[i, j] = Convert.ToDouble(elements[j]);
+                        }
+                    }
+                    MyMatrix secondMatrix = new MyMatrix(array2);
+                    MyMatrix sum = firstMatrix + secondMatrix;
+                    Console.WriteLine($"Sum of matrixes: {sum.ToString()}");
+                    break;
             }
         }
     }
