@@ -184,7 +184,7 @@ namespace labaa2
             
         }
     }
-    internal class Program
+    internal class MatrixData
     {
         static void Main(string[] args)
         {
