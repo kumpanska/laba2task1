@@ -72,6 +72,17 @@ namespace labaa2
             }
             return res.ToString().TrimEnd('\n');
         }
+        public MyMatrix(MyMatrix copyMatrix)
+        {
+            this.array = new double[copyMatrix.Height, copyMatrix.Width];
+            for (int i = 0; i < copyMatrix.Height; i++)
+            {
+                for (int j = 0; j < copyMatrix.Width; j++)
+                {
+                    this.array[i, j] = copyMatrix.array[i, j];
+                }
+            }
+        }
     }
     internal class Program
     {
