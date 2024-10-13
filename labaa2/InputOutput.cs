@@ -11,66 +11,45 @@ namespace labaa2
         public void Output()
         {
             Console.WriteLine("Choose type of matrix");
-            MyMatrix matrix;
             int n = Convert.ToInt32(Console.ReadLine());
             switch(n)
             {
                 case 1:
                     Console.WriteLine("Enter matrix from 2D array");
-                    string[] rows = Console.ReadLine().Split('\n');
-                    double[,] array = new double[rows.Length, rows[0].Split(' ').Length];
-                    for (int i = 0; i < rows.Length; i++)
-                    {
-                        string[] elements = rows[i].Split(' ');
-                        for (int j = 0; j < elements.Length; j++)
-                        {
-                            array[i, j] = Convert.ToDouble(elements[j]);
-                        }
-                    }
-                    MyMatrix matrix1 = new MyMatrix(array);
-                    Console.WriteLine(matrix1.ToString());
-                    Console.WriteLine("Transposed matrix");
-                    MyMatrix transposed = matrix1.GetTrasponedCopy();
-                    Console.WriteLine(transposed.ToString());
+                    double[,] arr = { { 1, 0, 5 }, { 14, 32, 134 } };
+                    MyMatrix myMatrix1 = new MyMatrix(arr);
+                    Console.WriteLine("Matrix from 2D array");
+                    Console.WriteLine(myMatrix1.ToString());
+                    myMatrix1.TransponeMe();
+                    Console.WriteLine("Transposed matrix from 2D array:");
+                    Console.WriteLine(myMatrix1.ToString());
                     break;
                 case 2:
-                    Console.WriteLine("Enter matrix from jaggged array");
-                    string[] r = Console.ReadLine().Split('\n');
-                    double[][] jaggedArray = new double[r.Length][];
-                    for (int i = 0; i < r.Length; i++)
-                    {
-                        string[] elements = r[i].Split(' ');
-                        jaggedArray[i] = new double[elements.Length];
-                        for (int j = 0; j < elements.Length; j++)
-                        {
-                            jaggedArray[i][j] = Convert.ToDouble(elements[j]);
-                        }
-                    }
-                    MyMatrix matrix2 = new MyMatrix(jaggedArray);
-                    Console.WriteLine(matrix2.ToString());
-                    Console.WriteLine("Transpose matrix");
-                    MyMatrix transposed2 = matrix2.GetTrasponedCopy();
-                    Console.WriteLine(transposed2.ToString());
+                    double[][] jagged = { new double[] { 0, 1 }, new double[] { 112, 13 }, new double[] { -23, 312 } };
+                    MyMatrix myMatrix2 = new MyMatrix(jagged);
+                    Console.WriteLine("Matrix from jagged array");
+                    Console.WriteLine(myMatrix2.ToString());
+                    myMatrix2.TransponeMe();
+                    Console.WriteLine("Transposed jagged matrix:");
+                    Console.WriteLine(myMatrix2.ToString());
                     break;
                 case 3:
-                    Console.WriteLine("Enter matrix from array string");
-                    rows = Console.ReadLine().Split('\n');
-                    string[] stringArray = new string[rows.Length];
-                    for (int i = 0; i < rows.Length; i++)
-                    {
-                        stringArray[i] = rows[i];
-                    }
-                    MyMatrix matrix3 = new MyMatrix(stringArray);
-                    Console.WriteLine(matrix3.ToString());
-                    Console.WriteLine("Transpose matrix");
-                    MyMatrix transposed3 = matrix3.GetTrasponedCopy();
-                    Console.WriteLine(transposed3.ToString());
+                    string[] strArray = { "0 8 9 0", "23 42 44 134", "244 -2 1 -3" };
+                    MyMatrix myMatrix3 = new MyMatrix(strArray);
+                    Console.WriteLine("Matrix from string array");
+                    Console.WriteLine(myMatrix3.ToString());
+                    myMatrix3.TransponeMe();
+                    Console.WriteLine("Transposed matrix from string array:");
+                    Console.WriteLine(myMatrix3.ToString());
                     break;
                 case 4:
-                    Console.WriteLine("Enter matrix from string");
-                    string str = Console.ReadLine();
-                    matrix = new MyMatrix(str.Split(new[] {'\t' },StringSplitOptions.RemoveEmptyEntries));
-                    Console.WriteLine(matrix.ToString());
+                    string str = "0 3 0\n76 2 4\n43 22 -23";
+                    MyMatrix myMatrix4 = new MyMatrix(str);
+                    Console.WriteLine("Matrix from string");
+                    Console.WriteLine(myMatrix4.ToString());
+                    myMatrix4.TransponeMe();
+                    Console.WriteLine("Transposed matrix from string:");
+                    Console.WriteLine(myMatrix4.ToString());
                     break;
                 case 5:
                     Console.WriteLine("Enter first matrix");
