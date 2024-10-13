@@ -102,7 +102,7 @@ namespace labaa2
                 }
                 if (isEmpty)
                 {
-                    throw new ArgumentException("Row can't be empty");
+                    throw new InvalidOperationException($"Row {i} is empty. Program will terminate.");
                 }
             }
             this.array = array;
@@ -127,7 +127,7 @@ namespace labaa2
                 }
                 if (isEmpty)
                 {
-                    throw new ArgumentException("Row cannot be empty");
+                    throw new InvalidOperationException($"Row {i} is empty. Program will terminate.");
                 }
             }
             for (int i = 0; i < jagged.Length; i++)
@@ -170,7 +170,7 @@ namespace labaa2
                     }
                     if (isEmpty)
                     {
-                        throw new ArgumentException("Row can't be zero");
+                        throw new InvalidOperationException($"Row {i} is empty. Program will terminate.");
                     }
                 }
             }
