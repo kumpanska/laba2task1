@@ -52,62 +52,29 @@ namespace labaa2
                     Console.WriteLine(myMatrix4.ToString());
                     break;
                 case 5:
-                    Console.WriteLine("Enter first matrix");
-                    rows = Console.ReadLine().Split('\n');
-                    double[,] array1 = new double[rows.Length, rows[0].Split(' ').Length];
-                    for (int i = 0; i < rows.Length; i++)
-                    {
-                        string[] elements = rows[i].Split(' ');
-                        for (int j = 0; j < elements.Length; j++)
-                        {
-                            array1[i, j] = Convert.ToDouble(elements[j]);
-                        }
-                    }
-                    MyMatrix firstMatrix = new MyMatrix(array1);
-                    Console.WriteLine("Enter second matrix");
-                    rows = Console.ReadLine().Split('\n');
-                    double[,] array2 = new double[rows.Length, rows[0].Split(' ').Length];
-                    for (int i = 0; i < rows.Length; i++)
-                    {
-                        string[] elements = rows[i].Split(' ');
-                        for (int j = 0; j < elements.Length; j++)
-                        {
-                            array2[i, j] = Convert.ToDouble(elements[j]);
-                        }
-                    }
-                    MyMatrix secondMatrix = new MyMatrix(array2);
-                    MyMatrix sum = firstMatrix + secondMatrix;
-                    Console.WriteLine("Result of sum:");
-                    Console.WriteLine(sum.ToString());
+                    double[,] array = { { 1, 0, 5 }, { 14, 32, 134 } };
+                    MyMatrix origMatrix = new MyMatrix(array);
+                    Console.WriteLine("Origin matrix");
+                    Console.WriteLine(origMatrix.ToString());
+                    MyMatrix copyMatrix = new MyMatrix(origMatrix);
+                    Console.WriteLine("Matrix from copy of other instance");
+                    Console.WriteLine(copyMatrix.ToString());
+                    copyMatrix.TransponeMe();
+                    Console.WriteLine("Transposed matrix:");
+                    Console.WriteLine(copyMatrix.ToString());
                     break;
                 case 6:
-                    Console.WriteLine("Enter first matrix");
-                    rows = Console.ReadLine().Split('\n');
-                    double[,] array3 = new double[rows.Length, rows[0].Split(' ').Length];
-                    for (int i = 0; i < rows.Length; i++)
-                    {
-                        string[] elements = rows[i].Split(' ');
-                        for (int j = 0; j < elements.Length; j++)
-                        {
-                            array3[i, j] = Convert.ToDouble(elements[j]);
-                        }
-                    }
-                    MyMatrix firstMatrix1 = new MyMatrix(array3);
-                    Console.WriteLine("Enter second matrix");
-                    rows = Console.ReadLine().Split('\n');
-                    double[,] array4 = new double[rows.Length, rows[0].Split(' ').Length];
-                    for (int i = 0; i < rows.Length; i++)
-                    {
-                        string[] elements = rows[i].Split(' ');
-                        for (int j = 0; j < elements.Length; j++)
-                        {
-                            array4[i, j] = Convert.ToDouble(elements[j]);
-                        }
-                    }
-                    MyMatrix secondMatrix2= new MyMatrix(array4);
-                    MyMatrix multiply = firstMatrix1 * secondMatrix2;
-                    Console.WriteLine("Result of multiply");
-                    Console.WriteLine(multiply.ToString());
+                    Console.WriteLine("First matrix");
+                    double[,] arr1 = { { 5, 34 }, { 3, 4 } };
+                    MyMatrix m1 = new MyMatrix(arr1);
+                    Console.WriteLine(m1.ToString());
+                    Console.WriteLine("Second matrix");
+                    double[,] arr2 = { { 5, 6 }, { 2, 4 } };
+                    MyMatrix m2 = new MyMatrix(arr2);
+                    Console.WriteLine(m2.ToString());
+                    MyMatrix result = m1 + m2;
+                    Console.WriteLine("New matrix");
+                    Console.WriteLine(result.ToString());
                     break;
             }
         }
