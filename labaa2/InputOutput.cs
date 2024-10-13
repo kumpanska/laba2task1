@@ -76,6 +76,19 @@ namespace labaa2
                     Console.WriteLine("New matrix");
                     Console.WriteLine(result.ToString());
                     break;
+                case 7:
+                    Console.WriteLine("First matrix");
+                    double[,] arr3 = { { 1, 2, 3 }, { 4, 5, 3 } };
+                    MyMatrix m3 = new MyMatrix(arr3);
+                    Console.WriteLine(m3.ToString());
+                    Console.WriteLine("Second matrix");
+                    double[,] arr4 = { { 1, 2 }, { 7, 4 }, { 1, 2 } };
+                    MyMatrix m4 = new MyMatrix(arr4);
+                    Console.WriteLine(m4.ToString());
+                    MyMatrix res = m3 * m4;
+                    Console.WriteLine("New matrix");
+                    Console.WriteLine(res.ToString());
+                    break;
             }
         }
     }
