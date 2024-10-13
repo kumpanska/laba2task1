@@ -19,11 +19,11 @@ namespace labaa2
         {
             get
             {
-                if (i < 0 || i > array.GetLength(0))
+                if (i < 0 || i >=array.GetLength(0))
                 {
                     throw new IndexOutOfRangeException("Row index is out of range");
                 }
-                if (j < 0 || j > array.GetLength(1))
+                if (j < 0 || j >=array.GetLength(1))
                 {
                     throw new IndexOutOfRangeException("Column index is out of range");
                 }
@@ -31,11 +31,11 @@ namespace labaa2
             }
             set
             {
-                if (i < 0 || i > array.GetLength(0))
+                if (i < 0 || i >= array.GetLength(0))
                 {
                     throw new IndexOutOfRangeException("Row index is out of range");
                 }
-                if (j < 0 || j > array.GetLength(1))
+                if (j < 0 || j >=array.GetLength(1))
                 {
                     throw new IndexOutOfRangeException("Column index is out of range");
                 }
