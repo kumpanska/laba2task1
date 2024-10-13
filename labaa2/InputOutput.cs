@@ -11,6 +11,7 @@ namespace labaa2
         public void Output()
         {
             Console.WriteLine("Choose type of matrix");
+            MyMatrix matrix;
             int n = Convert.ToInt32(Console.ReadLine());
             switch(n)
             {
@@ -68,8 +69,8 @@ namespace labaa2
                 case 4:
                     Console.WriteLine("Enter matrix from string");
                     string str = Console.ReadLine();
-                    MyMatrix matrix4 = new MyMatrix(str);
-                    Console.WriteLine(matrix4.ToString());
+                    matrix = new MyMatrix(str.Split(new[] {'\t' },StringSplitOptions.RemoveEmptyEntries));
+                    Console.WriteLine(matrix.ToString());
                     break;
                 case 5:
                     Console.WriteLine("Enter first matrix");
