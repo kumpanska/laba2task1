@@ -15,7 +15,6 @@ namespace labaa2
             switch(n)
             {
                 case 1:
-                    Console.WriteLine("Enter matrix from 2D array");
                     double[,] arr = { { 1, 0, 5 }, { 14, 32, 134 } };
                     MyMatrix myMatrix1 = new MyMatrix(arr);
                     Console.WriteLine("Matrix from 2D array");
