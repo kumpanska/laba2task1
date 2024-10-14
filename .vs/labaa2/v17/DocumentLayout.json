@@ -22,15 +22,11 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
@@ -40,7 +36,7 @@
               "RelativeDocumentMoniker": "labaa2\\InputOutput.cs",
               "ToolTip": "C:\\c#labs\\labaa2\\labaa2\\InputOutput.cs",
               "RelativeToolTip": "labaa2\\InputOutput.cs",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAQwFsAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAKYAAAAAAAAAAAAiwLEAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-12T20:17:06.877Z",
               "EditorCaption": ""
@@ -55,8 +51,7 @@
               "RelativeToolTip": "labaa2\\MatrixOperations.cs",
               "ViewState": "AgIAABsAAAAAAAAAAAA5wDcAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T16:49:57.254Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-12T16:49:57.254Z"
             },
             {
               "$type": "Document",
@@ -66,7 +61,7 @@
               "RelativeDocumentMoniker": "labaa2\\MatrixData.cs",
               "ToolTip": "C:\\c#labs\\labaa2\\labaa2\\MatrixData.cs",
               "RelativeToolTip": "labaa2\\MatrixData.cs",
-              "ViewState": "AgIAAJ0AAAAAAAAAAAAqwKsAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAADQAAAAAAAAAAAAswKsAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-12T07:57:18.41Z",
               "EditorCaption": ""

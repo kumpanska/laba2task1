@@ -157,39 +157,39 @@ namespace labaa2
                     case 7:
                         Console.WriteLine("First matrix");
                         Console.Write("Enter matrix dimensions (rows cols): ");
-                        string[] el3 = Console.ReadLine().Split(' ');
+                        string[] el3= Console.ReadLine().Split(' ');
                         int rFirst1 = Convert.ToInt32(el3[0]);
                         int cFirst1 = Convert.ToInt32(el3[1]);
                         double[,] matrixFirst1 = new double[rFirst1, cFirst1];
                         Console.WriteLine("Enter matrix elements (separated by spaces): ");
                         for (int i = 0; i < rFirst1; i++)
                         {
-                            string[] input1 = Console.ReadLine().Split(' ');
+                            string[] element1= Console.ReadLine().Split(' ');
                             for (int j = 0; j < cFirst1; j++)
                             {
-                                matrixFirst1[i, j] = Convert.ToDouble(input1[j]);
+                                matrixFirst1[i, j] = Convert.ToDouble(element1[j]);
                             }
                         }
-                        MyMatrix firstMatrix1 = new MyMatrix(matrixFirst1);
-                        Console.WriteLine(firstMatrix1.ToString());
+                        MyMatrix m3 = new MyMatrix(matrixFirst1);
+                        Console.WriteLine(m3.ToString());
                         Console.WriteLine("Second matrix");
                         Console.Write("Enter matrix dimensions (rows cols): ");
                         string[] el4 = Console.ReadLine().Split(' ');
-                        int rFirst2= Convert.ToInt32(el4[0]);
+                        int rFirst2 = Convert.ToInt32(el4[0]);
                         int cFirst2 = Convert.ToInt32(el4[1]);
                         double[,] matrixFirst2 = new double[rFirst2, cFirst2];
                         Console.WriteLine("Enter matrix elements (separated by spaces): ");
                         for (int i = 0; i < rFirst2; i++)
                         {
-                            string[] input2 = Console.ReadLine().Split(' ');
-                            for (int j = 0; j < cFirst1; j++)
+                            string[] element2 = Console.ReadLine().Split(' ');
+                            for (int j = 0; j < cFirst2; j++)
                             {
-                                matrixFirst2[i, j] = Convert.ToDouble(input2[j]);
+                                matrixFirst2[i, j] = Convert.ToDouble(element2[j]);
                             }
                         }
-                        MyMatrix secondMatrix1 = new MyMatrix(matrixFirst2);
-                        Console.WriteLine(firstMatrix1.ToString());
-                        MyMatrix res = firstMatrix1 * secondMatrix1;
+                        MyMatrix m4 = new MyMatrix(matrixFirst2);
+                        Console.WriteLine(m4.ToString());
+                        MyMatrix res = m3 * m4;
                         Console.WriteLine("New matrix");
                         Console.WriteLine(res.ToString());
                         break;
