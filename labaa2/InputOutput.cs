@@ -22,8 +22,21 @@ namespace labaa2
                 switch (n)
                 {
                     case 1:
-                        double[,] arr = { { 1, 0, 5 }, { 14, 32, 134 } };
-                        MyMatrix myMatrix1 = new MyMatrix(arr);
+                        Console.Write("Enter matrix dimensions (rows cols): ");
+                        string[] numbers = Console.ReadLine().Split(' ');
+                        int rows = Convert.ToInt32(numbers[0]);
+                        int cols = Convert.ToInt32(numbers[1]);
+                        double[,] matrix1 = new double[rows, cols];
+                        Console.WriteLine("Enter matrix elements (separated by spaces):");
+                        for (int i = 0; i < rows; i++)
+                        {
+                            string[] elements = Console.ReadLine().Split(' ');
+                            for (int j = 0; j < cols; j++)
+                            {
+                                matrix1[i, j] = Convert.ToDouble(elements[j]);
+                            }
+                        }
+                        MyMatrix myMatrix1 = new MyMatrix(matrix1);
                         Console.WriteLine("Matrix from 2D array");
                         Console.WriteLine(myMatrix1.ToString());
                         myMatrix1.TransponeMe();
@@ -31,7 +44,18 @@ namespace labaa2
                         Console.WriteLine(myMatrix1.ToString());
                         break;
                     case 2:
-                        double[][] jagged = { new double[] { 0, 1 }, new double[] { 112, 13 }, new double[] { -23, 312 } };
+                        Console.Write("Enter the number of rows for the jagged array: ");
+                        rows = Convert.ToInt32(Console.ReadLine());
+                        double[][] jagged = new double[rows][];
+                        for (int i = 0; i < rows; i++)
+                        {
+                            string[] elements = Console.ReadLine().Split(' ');
+                            jagged[i] = new double[elements.Length];
+                            for (int j = 0; j < elements.Length; j++)
+                            {
+                                jagged[i][j] = Convert.ToDouble(elements[j]);
+                            }
+                        }
                         MyMatrix myMatrix2 = new MyMatrix(jagged);
                         Console.WriteLine("Matrix from jagged array");
                         Console.WriteLine(myMatrix2.ToString());
@@ -40,7 +64,14 @@ namespace labaa2
                         Console.WriteLine(myMatrix2.ToString());
                         break;
                     case 3:
-                        string[] strArray = { "0 8 9 0", "23 42 44 134", "244 -2 1 -3" };
+                        Console.Write("Enter the number of rows for the string array: ");
+                        rows = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Enter elements");
+                        string[] strArray = new string[rows];
+                        for (int i = 0; i < rows; i++)
+                        {
+                            strArray[i] = Console.ReadLine();
+                        }
                         MyMatrix myMatrix3 = new MyMatrix(strArray);
                         Console.WriteLine("Matrix from string array");
                         Console.WriteLine(myMatrix3.ToString());
@@ -49,7 +80,9 @@ namespace labaa2
                         Console.WriteLine(myMatrix3.ToString());
                         break;
                     case 4:
-                        string str = "0 3 0\n76 2 4\n43 22 -23";
+                        Console.WriteLine("Enter the matrix data (separated by spaces and rows by \\n): ");
+                        string str = Console.ReadLine();
+                        str = str.Replace("\\n", Environment.NewLine);
                         MyMatrix myMatrix4 = new MyMatrix(str);
                         Console.WriteLine("Matrix from string");
                         Console.WriteLine(myMatrix4.ToString());
