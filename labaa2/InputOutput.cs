@@ -30,10 +30,10 @@ namespace labaa2
                         Console.WriteLine("Enter matrix elements (separated by spaces):");
                         for (int i = 0; i < rows; i++)
                         {
-                            string[] elements = Console.ReadLine().Split(' ');
+                            string[] number = Console.ReadLine().Split(' ');
                             for (int j = 0; j < cols; j++)
                             {
-                                matrix1[i, j] = Convert.ToDouble(elements[j]);
+                                matrix1[i, j] = Convert.ToDouble(number[j]);
                             }
                         }
                         MyMatrix myMatrix1 = new MyMatrix(matrix1);
@@ -45,15 +45,15 @@ namespace labaa2
                         break;
                     case 2:
                         Console.Write("Enter the number of rows for the jagged array: ");
-                        rows = Convert.ToInt32(Console.ReadLine());
-                        double[][] jagged = new double[rows][];
-                        for (int i = 0; i < rows; i++)
+                        int  row = Convert.ToInt32(Console.ReadLine());
+                        double[][] jagged = new double[row][];
+                        for (int i = 0; i < row; i++)
                         {
-                            string[] elements = Console.ReadLine().Split(' ');
-                            jagged[i] = new double[elements.Length];
-                            for (int j = 0; j < elements.Length; j++)
+                            string[] num = Console.ReadLine().Split(' ');
+                            jagged[i] = new double[num.Length];
+                            for (int j = 0; j < num.Length; j++)
                             {
-                                jagged[i][j] = Convert.ToDouble(elements[j]);
+                                jagged[i][j] = Convert.ToDouble(num[j]);
                             }
                         }
                         MyMatrix myMatrix2 = new MyMatrix(jagged);
@@ -65,10 +65,10 @@ namespace labaa2
                         break;
                     case 3:
                         Console.Write("Enter the number of rows for the string array: ");
-                        rows = Convert.ToInt32(Console.ReadLine());
+                        int r = Convert.ToInt32(Console.ReadLine());
                         Console.WriteLine("Enter elements");
-                        string[] strArray = new string[rows];
-                        for (int i = 0; i < rows; i++)
+                        string[] strArray = new string[r];
+                        for (int i = 0; i < r; i++)
                         {
                             strArray[i] = Console.ReadLine();
                         }
@@ -91,8 +91,21 @@ namespace labaa2
                         Console.WriteLine(myMatrix4.ToString());
                         break;
                     case 5:
-                        double[,] array = { { 1, 0, 5 }, { 14, 32, 134 } };
-                        MyMatrix origMatrix = new MyMatrix(array);
+                        Console.Write("Enter matrix dimensions (rows cols): ");
+                        string []elements = Console.ReadLine().Split(' ');
+                        int rowsOrigin= Convert.ToInt32(elements[0]);
+                        int colsOrigin = Convert.ToInt32(elements[1]);
+                        double[,]m1= new double[rowsOrigin, colsOrigin];
+                        Console.WriteLine("Enter matrix elements (separated by spaces): ");
+                        for (int i = 0; i < rowsOrigin; i++)
+                        {
+                            string[] num = Console.ReadLine().Split(' ');
+                            for (int j = 0; j < colsOrigin; j++)
+                            {
+                                m1[i, j] = Convert.ToDouble(elements[j]);
+                            }
+                        }
+                        MyMatrix origMatrix = new MyMatrix(m1);
                         Console.WriteLine("Origin matrix");
                         Console.WriteLine(origMatrix.ToString());
                         MyMatrix copyMatrix = new MyMatrix(origMatrix);
@@ -104,27 +117,79 @@ namespace labaa2
                         break;
                     case 6:
                         Console.WriteLine("First matrix");
-                        double[,] arr1 = { { 5, 34 }, { 3, 4 } };
-                        MyMatrix m1 = new MyMatrix(arr1);
-                        Console.WriteLine(m1.ToString());
+                        Console.Write("Enter matrix dimensions (rows cols): ");
+                        string[]el1 = Console.ReadLine().Split(' ');
+                        int rFirst = Convert.ToInt32(el1[0]);
+                        int cFirst = Convert.ToInt32(el1[1]);
+                        double [,]matrixFirst = new double[rFirst, cFirst];
+                        Console.WriteLine("Enter matrix elements (separated by spaces): ");
+                        for (int i = 0; i < rFirst; i++)
+                        {
+                            string[] input1 = Console.ReadLine().Split(' ');
+                            for (int j = 0; j < cFirst; j++)
+                            {
+                                matrixFirst[i, j] = Convert.ToDouble(input1[j]);
+                            }
+                        }
+                        MyMatrix firstMatrix = new MyMatrix(matrixFirst);
+                        Console.WriteLine(firstMatrix.ToString());
                         Console.WriteLine("Second matrix");
-                        double[,] arr2 = { { 5, 6 }, { 2, 4 } };
-                        MyMatrix m2 = new MyMatrix(arr2);
-                        Console.WriteLine(m2.ToString());
-                        MyMatrix result = m1 + m2;
+                        Console.Write("Enter matrix dimensions (rows cols): ");
+                        string[]el2= Console.ReadLine().Split(' ');
+                        int rSecond = Convert.ToInt32(el2[0]);
+                        int cSecond = Convert.ToInt32(el2[1]);
+                        double[,] secondMatrix = new double[rSecond, cSecond];
+                        Console.WriteLine("Enter matrix elements (separated by spaces): ");
+                        for (int i = 0; i < rSecond; i++)
+                        {
+                            string[] input2 = Console.ReadLine().Split(' ');
+                            for (int j = 0; j < cSecond; j++)
+                            {
+                                secondMatrix[i, j] = Convert.ToDouble(input2[j]);
+                            }
+                        }
+                        MyMatrix matrixSecond = new MyMatrix(secondMatrix);
+                        Console.WriteLine(matrixSecond.ToString());
+                        MyMatrix result = firstMatrix + matrixSecond;
                         Console.WriteLine("New matrix");
                         Console.WriteLine(result.ToString());
                         break;
                     case 7:
                         Console.WriteLine("First matrix");
-                        double[,] arr3 = { { 1, 2, 3 }, { 4, 5, 3 } };
-                        MyMatrix m3 = new MyMatrix(arr3);
-                        Console.WriteLine(m3.ToString());
+                        Console.Write("Enter matrix dimensions (rows cols): ");
+                        string[] el3 = Console.ReadLine().Split(' ');
+                        int rFirst1 = Convert.ToInt32(el3[0]);
+                        int cFirst1 = Convert.ToInt32(el3[1]);
+                        double[,] matrixFirst1 = new double[rFirst1, cFirst1];
+                        Console.WriteLine("Enter matrix elements (separated by spaces): ");
+                        for (int i = 0; i < rFirst1; i++)
+                        {
+                            string[] input1 = Console.ReadLine().Split(' ');
+                            for (int j = 0; j < cFirst1; j++)
+                            {
+                                matrixFirst1[i, j] = Convert.ToDouble(input1[j]);
+                            }
+                        }
+                        MyMatrix firstMatrix1 = new MyMatrix(matrixFirst1);
+                        Console.WriteLine(firstMatrix1.ToString());
                         Console.WriteLine("Second matrix");
-                        double[,] arr4 = { { 1, 2 }, { 7, 4 }, { 1, 2 } };
-                        MyMatrix m4 = new MyMatrix(arr4);
-                        Console.WriteLine(m4.ToString());
-                        MyMatrix res = m3 * m4;
+                        Console.Write("Enter matrix dimensions (rows cols): ");
+                        string[] el4 = Console.ReadLine().Split(' ');
+                        int rFirst2= Convert.ToInt32(el4[0]);
+                        int cFirst2 = Convert.ToInt32(el4[1]);
+                        double[,] matrixFirst2 = new double[rFirst2, cFirst2];
+                        Console.WriteLine("Enter matrix elements (separated by spaces): ");
+                        for (int i = 0; i < rFirst2; i++)
+                        {
+                            string[] input2 = Console.ReadLine().Split(' ');
+                            for (int j = 0; j < cFirst1; j++)
+                            {
+                                matrixFirst2[i, j] = Convert.ToDouble(input2[j]);
+                            }
+                        }
+                        MyMatrix secondMatrix1 = new MyMatrix(matrixFirst2);
+                        Console.WriteLine(firstMatrix1.ToString());
+                        MyMatrix res = firstMatrix1 * secondMatrix1;
                         Console.WriteLine("New matrix");
                         Console.WriteLine(res.ToString());
                         break;
