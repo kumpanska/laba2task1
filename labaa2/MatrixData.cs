@@ -74,14 +74,11 @@ namespace labaa2
         }
         public MyMatrix(MyMatrix copyMatrix)
         {
-            this.array = new double[copyMatrix.Height, copyMatrix.Width];
-            for (int i = 0; i < copyMatrix.Height; i++)
+            if (copyMatrix.array == null)
             {
-                for (int j = 0; j < copyMatrix.Width; j++)
-                {
-                    this.array[i, j] = copyMatrix.array[i, j];
-                }
+                throw new ArgumentNullException("Array can't be null");
             }
+            array = (double[,])copyMatrix.array.Clone();
         }
         public MyMatrix(double[,] array)
         {

@@ -102,7 +102,7 @@ namespace labaa2
                             string[] num = Console.ReadLine().Split(' ');
                             for (int j = 0; j < colsOrigin; j++)
                             {
-                                m1[i, j] = Convert.ToDouble(elements[j]);
+                                m1[i, j] = Convert.ToDouble(num[j]);
                             }
                         }
                         MyMatrix origMatrix = new MyMatrix(m1);
