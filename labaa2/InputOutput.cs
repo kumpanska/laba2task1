@@ -13,7 +13,7 @@ namespace labaa2
         {
             while (true)
             {
-                Console.WriteLine("Choose type of matrix(1-5) or operations(6-7) or exit the program(0)");
+                Console.WriteLine("Choose type of matrix(1-5) or operations(6-8) or exit the program(0)");
                 int n = Convert.ToInt32(Console.ReadLine());
                 if (n == 0)
                 {
