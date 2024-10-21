@@ -59,8 +59,8 @@ namespace labaa2
         }
         public MyMatrix GetTrasponedCopy()
         {
-            double[,] transposedArray = GetTransponedArray();
-            return new MyMatrix(transposedArray);
+            double[,] transponed=GetTransponedArray();
+            return new MyMatrix(transponed);
 
         }
         public void TransponeMe()

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -192,6 +193,28 @@ namespace labaa2
                         MyMatrix res = m3 * m4;
                         Console.WriteLine("New matrix");
                         Console.WriteLine(res.ToString());
+                        break;
+                    case 8:
+                        Console.Write("Enter matrix dimensions (rows cols): ");
+                        string[] rowAndCol= Console.ReadLine().Split(' ');
+                        int rowss = Convert.ToInt32(rowAndCol[0]);
+                        int colss= Convert.ToInt32(rowAndCol[1]);
+                        double[,] matrix8 = new double[rowss, colss];
+                        Console.WriteLine("Enter matrix elements (separated by spaces):");
+                        for (int i = 0; i < rowss; i++)
+                        {
+                            string[] elem = Console.ReadLine().Split(' ');
+                            for (int j = 0; j < colss; j++)
+                            {
+                                matrix8[i, j] = Convert.ToDouble(elem[j]);
+                            }
+                        }
+                        MyMatrix originalMatrix= new MyMatrix(matrix8);
+                        Console.WriteLine("Origin matrix");
+                        Console.WriteLine(originalMatrix.ToString());
+                        MyMatrix transposedCopy = originalMatrix.GetTrasponedCopy();
+                        Console.WriteLine("Transponed copy of matrix");
+                        Console.WriteLine(transposedCopy.ToString());
                         break;
                     default:
                         Console.WriteLine("Invalid option. Please select again.");
